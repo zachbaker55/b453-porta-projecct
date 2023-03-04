@@ -1,4 +1,4 @@
-# b453-porta-projecct
+# b453-porta-project
 Porta project for B453
 
 Team Members: Zach Baker and Kevin Schoonover
