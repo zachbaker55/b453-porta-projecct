@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script is for the only enemy in the game, spawning and stuff is controlled in another script
+*/
 public class BasicEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject target; 

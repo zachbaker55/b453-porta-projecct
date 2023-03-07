@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script is for the mage aspect of the player, it controls movement taking damage and fireballs
+*/
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject prefabFireBall;

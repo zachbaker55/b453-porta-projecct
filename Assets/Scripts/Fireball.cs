@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script is for the fireball object, it shouldnt do much
+*/
 public class Fireball : MonoBehaviour
 {
 
