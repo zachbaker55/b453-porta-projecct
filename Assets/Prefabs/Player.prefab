@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabFireBall: {fileID: 9099741463316708247, guid: 2ca4e3a7f2f139249aebcca500b4ee77, type: 3}
-  targetLocation: {x: 0, y: 0, z: 0}
+  targetLocation: {x: 0, y: 0}
   rb: {fileID: 3257976500243167427}
   mainCamera: {fileID: 0}
   anim: {fileID: 7736477020996516914}
@@ -173,7 +173,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02, y: 0}
+  m_Offset: {x: -0.03, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -184,7 +184,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55, y: 0.6}
+  m_Size: {x: 0.82, y: 0.88}
   m_EdgeRadius: 0
 --- !u!50 &3257976500243167427
 Rigidbody2D:
