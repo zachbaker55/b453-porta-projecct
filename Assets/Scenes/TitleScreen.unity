@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DeathCounter>k__BackingField: 0
-  <LevelCheckPoint>k__BackingField: 5
+  <LevelCheckPoint>k__BackingField: 0
 --- !u!4 &1516215415
 Transform:
   m_ObjectHideFlags: 0
@@ -599,8 +599,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -796,6 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bf5f1d5168b354ab627c0039791f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayText: {fileID: 1619315545}
 --- !u!4 &1716344790
 Transform:
   m_ObjectHideFlags: 0

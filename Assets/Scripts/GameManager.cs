@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
 This script is a SINGLETON for that manages whatever global script behavior they had in the godot version
@@ -25,4 +26,30 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this);
         } 
     }
+
+    void Update() 
+    {
+        if(Input.GetButtonDown("UI Pause"))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    
+    private void OnSceneChange(Scene current, Scene next) 
+    {
+        int newScene = next.buildIndex;
+        if (newScene != 0) LevelCheckPoint = newScene;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.activeSceneChanged += OnSceneChange;
+    }
+
+    private void OnDisable() 
+    {
+        SceneManager.activeSceneChanged -= OnSceneChange;
+    }
+
 }

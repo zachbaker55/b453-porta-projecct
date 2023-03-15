@@ -20,7 +20,7 @@ public class Fireball : MonoBehaviour
     {
         if(collision.tag == "TilemapWall")
         {
-             Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
         else if(collision.tag == "Enemy")
         {
