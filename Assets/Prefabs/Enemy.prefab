@@ -52,7 +52,7 @@ MonoBehaviour:
   rb: {fileID: 5178779674928669077}
   anim: {fileID: 0}
   <speed>k__BackingField: 1
-  <health>k__BackingField: 100
+  <health>k__BackingField: 1
 --- !u!50 &5178779674928669077
 Rigidbody2D:
   serializedVersion: 4
@@ -73,7 +73,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5178779674928669076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 5178779675264954062}
   - component: {fileID: 5178779675264954060}
   - component: {fileID: 5178779675264954063}
+  - component: {fileID: 4688095345153205800}
   m_Layer: 0
   m_Name: Mob1
   m_TagString: Untagged
@@ -205,3 +206,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &4688095345153205800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5178779675264954057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.25, y: -0.5, z: 0}
+  - {x: -0.25, y: 0.05, z: 0}
+  - {x: 0.25, y: 0.05, z: 0}
+  - {x: 0.25, y: -0.5, z: 0}
+  m_ShapePathHash: 1544406493
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -62960

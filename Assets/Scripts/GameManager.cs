@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 /*
 This script is a SINGLETON for that manages whatever global script behavior they had in the godot version
 */
 public class GameManager : MonoBehaviour
 {
+
+    public static event Action PlayerWasDamaged;
+
     public static GameManager Instance { get; private set; }
 
     [field:SerializeField] public int DeathCounter  { get; set; } = 0;
@@ -51,5 +55,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.activeSceneChanged -= OnSceneChange;
     }
+
+    public static void StartPlayerWasDamaged() 
+    {
+        PlayerWasDamaged.Invoke();
+    }
+
 
 }

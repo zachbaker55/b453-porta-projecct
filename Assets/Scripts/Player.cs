@@ -19,9 +19,9 @@ public class Player : MonoBehaviour
 
 
 
-    [field:SerializeField] public float speed {get; set;} = 2.5f;
+    [field:SerializeField] public float speed {get; set;} = 5f;
 
-    [field:SerializeField] public float health {get; set;} = 100f;
+    [field:SerializeField] public float health {get; set;} = 4f;
 
     [field:SerializeField] public bool isDead {get; set;} = false;
 
@@ -37,13 +37,13 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButton("Fire2"))
         {
-            Debug.Log("New Location");
+            //Debug.Log("New Location");
             targetLocation = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         }
 
         if(Input.GetButtonDown("Fire1") && !isDead)
         {
-            Debug.Log("Shot Fireball");
+            //Debug.Log("Shot Fireball");
             CreateFireball();
         }
 
@@ -74,5 +74,16 @@ public class Player : MonoBehaviour
         Rigidbody2D Fireballrb = Fireball.GetComponent<Rigidbody2D>();
         Fireballrb.velocity =  mainCamera.ScreenToWorldPoint(Input.mousePosition)-this.transform.position ;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.Log(collision.name);
+        if(collision.tag == "Enemy")
+        {
+        GameManager.StartPlayerWasDamaged();
+        this.health--;
+        }
+    }
+
 
 }
