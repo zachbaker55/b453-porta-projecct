@@ -46,7 +46,12 @@ public class Player : MonoBehaviour
             //Debug.Log("Shot Fireball");
             CreateFireball();
         }
-
+        if(health <= 0 )
+        {
+            anim.Play("Dead");
+            speed = 0;
+            isDead = true;
+        }
 
     }
 
@@ -54,12 +59,12 @@ public class Player : MonoBehaviour
     {
         float distance = Vector2.Distance(targetLocation, this.transform.position);
 
-        if(distance > .1f)
+        if(distance > .1f && !isDead)
         {
             anim.Play("Walk");
             rb.velocity = (targetLocation - (Vector2)this.transform.position).normalized * speed;
         }
-        else
+        else if(!isDead)
         {
             //Setting velocity to 0  or targeting self helps fix the sprite from jiggling when extremely close to target
             //targetLocation = this.gameObject.transform.position;
