@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f76889aebed66b4b9a9a67d1da90620, type: 3}
+  m_Name: Level_2_Dialogue
+  m_EditorClassIdentifier: 
+  <StartingDialogue>k__BackingField:
+  - <Text>k__BackingField: 'Welcome to stage 2, here I will test your... determination. '
+    <Seconds>k__BackingField: 6
+  - <Text>k__BackingField: 'You know... I like adventurers, they come from time to
+      time to visit me '
+    <Seconds>k__BackingField: 7
+  - <Text>k__BackingField: 'Sometimes I make a cake for my visitors... '
+    <Seconds>k__BackingField: 5
+  - <Text>k__BackingField: Do you... do you want one?
+    <Seconds>k__BackingField: 3
+  <MiddleDialogue>k__BackingField:
+  - <Text>k__BackingField: 
+    <Seconds>k__BackingField: 0
+  <EndingDialogue>k__BackingField:
+  - <Text>k__BackingField: Congratulations, let's go to the next stage? the cake
+      is already done and waiting for you!
+    <Seconds>k__BackingField: 8
+  <DeathDialogue>k__BackingField:
+  - <Text>k__BackingField: Hehe
+    <Seconds>k__BackingField: 3
+  <HelpDialogue>k__BackingField:
+  - <Text>k__BackingField: '*Gamedev 1: Hey, pssss, I was watching you, and I noticed
+      that you are having a bad time...*'
+    <Seconds>k__BackingField: 10
+  - <Text>k__BackingField: '*Gamedev 1: So here goes a hint: try to keep the right
+      button pressed while spamming the left button of the mouse*'
+    <Seconds>k__BackingField: 14
+  - <Text>k__BackingField: '*Gamedev 2: Hey, wait a second, that''s a bug!*'
+    <Seconds>k__BackingField: 5
+  - <Text>k__BackingField: '*Gamedev 1: Nope, I promoted it to a feature :P*'
+    <Seconds>k__BackingField: 6
+  - <Text>k__BackingField: '*Gamedev 2: You...*'
+    <Seconds>k__BackingField: 3
+  <RespawnDialogue>k__BackingField:
+  - <Text>k__BackingField: '*System error: restarting...*'
+    <Seconds>k__BackingField: 3

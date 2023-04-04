@@ -11,12 +11,15 @@ public class GameManager : MonoBehaviour
 {
 
     public static event Action PlayerWasDamaged;
+    public static event Action PlayerDied;
 
     public static GameManager Instance { get; private set; }
 
     [field:SerializeField] public int DeathCounter  { get; set; } = 0;
 
     [field:SerializeField] public int LevelCheckPoint  { get; set; } = 0;
+
+
 
     void Awake()
     {
@@ -61,5 +64,9 @@ public class GameManager : MonoBehaviour
         PlayerWasDamaged.Invoke();
     }
 
+    public static void StartPlayerDied() 
+    {
+        PlayerDied.Invoke();
+    }
 
 }

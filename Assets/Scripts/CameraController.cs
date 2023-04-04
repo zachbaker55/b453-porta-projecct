@@ -22,16 +22,6 @@ public class CameraController : MonoBehaviour
         originalPosition = mCamera.transform.position;
     }
 
-    void OnEnable()
-    {
-        GameManager.PlayerWasDamaged += ScreenShake;
-    }
-
-    void OnDisable()
-    {
-        GameManager.PlayerWasDamaged -= ScreenShake;
-    }
-
     void OnDestroy()
     {
         GameManager.PlayerWasDamaged -= ScreenShake;

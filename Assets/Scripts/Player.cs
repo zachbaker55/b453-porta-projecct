@@ -46,11 +46,15 @@ public class Player : MonoBehaviour
             //Debug.Log("Shot Fireball");
             CreateFireball();
         }
-        if(health <= 0 )
+        if(health <= 0 && !isDead)
         {
             anim.Play("Dead");
             speed = 0;
+            rb.velocity = Vector2.zero;
             isDead = true;
+            
+            GameManager.StartPlayerDied();
+            
         }
 
     }
