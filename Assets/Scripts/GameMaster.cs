@@ -13,6 +13,8 @@ public class GameMaster : MonoBehaviour
 {
 
     [SerializeField] private TMP_Text Dialogue;
+    [SerializeField] private TMP_Text PointsText;
+    [SerializeField] private TMP_Text MissesText;
     [SerializeField] private GameObject SkipButton;
 
     //Vary based on level
@@ -32,6 +34,8 @@ public class GameMaster : MonoBehaviour
         GameManager.PlayerDied += OnPlayerDead;
         DialogueEvent.DialogueStart += OnDialogueStart;
         DialogueEvent.DialogueEnd += OnDialogueEnd;
+        Note.NoteHit += OnNoteHit;
+        Note.NoteMissed += OnNoteMissed;
         StartCoroutine(PlayDialogue(LevelDialogue.StartingDialogue, "StartingDialogue"));
         
     }
@@ -41,6 +45,8 @@ public class GameMaster : MonoBehaviour
         GameManager.PlayerDied -= OnPlayerDead;
         DialogueEvent.DialogueStart -= OnDialogueStart;
         DialogueEvent.DialogueEnd -= OnDialogueEnd;
+        Note.NoteHit -= OnNoteHit;
+        Note.NoteMissed -= OnNoteMissed;
     }
 
     public void SkipDialogue()
@@ -108,7 +114,7 @@ public class GameMaster : MonoBehaviour
         //if the player died > 5, play this. If not skip this and start respawn.
         else if(args.DialogueContext == "HelpDialogue")
         {
-             StartCoroutine(PlayDialogue(LevelDialogue.RespawnDialogue, "RespawnDialogue"));
+            StartCoroutine(PlayDialogue(LevelDialogue.RespawnDialogue, "RespawnDialogue"));
         }
         
         //play this before respawning level
@@ -225,6 +231,17 @@ public class GameMaster : MonoBehaviour
             StartCoroutine(PlayDialogue(LevelDialogue.EndingDialogue, "EndingDialogue"));
         }
     }
+
+    void OnNoteHit(int hits)
+    {
+        PointsText.text = "Points: " + hits;
+    }
+
+    void OnNoteMissed(int misses)
+    {
+        MissesText.text = "Misses: " + misses;
+    }
+
 
     void WorldChanges()
     {

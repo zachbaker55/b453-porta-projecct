@@ -11,7 +11,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Music
   - Water
   - UI
   - 
@@ -44,6 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
+  - name: Music
     uniqueID: 3073788843
     locked: 0
