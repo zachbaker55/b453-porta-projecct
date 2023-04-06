@@ -39,7 +39,7 @@ public class NoteEnd : MonoBehaviour
     {
         Note note = other.gameObject.GetComponent<Note>();
         if (note != null) {
-            note.IsEnabled = false;
+            note.Triggered = true;
         }
     }
 

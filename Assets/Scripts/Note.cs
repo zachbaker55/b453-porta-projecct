@@ -5,21 +5,20 @@ using UnityEngine;
 using System;
 
 
-public enum NoteDirection {
-    left,
-    up,
-    down,
-    right
-}
-
-
 public class Note : MonoBehaviour
 {
-    public NoteDirection direction;
+    [SerializeField] private NoteDirection direction;
+    public NoteDirection Direction { 
+        get { return direction; }
+        set { direction = value; }
+    }
+
     [field:SerializeField] public float NoteSpeed {get; set;} = 1f;
     [field:SerializeField] public float DeathTime {get; set;} = 1f;
+    public bool Triggered {get; set;} = false;
+    private bool hit = false;
+    private bool missed = false;
     private Rigidbody2D rigidBody;
-    [HideInInspector] public bool IsEnabled {get; set;} = false;
     public static event Action<int> NoteHit;
     public static event Action<int> NoteMissed;
 
@@ -33,17 +32,47 @@ public class Note : MonoBehaviour
 
     private void Start() 
     {
-        rigidBody.velocity = new Vector2(0,1).normalized * NoteSpeed;
+        rigidBody.velocity = new Vector2(0,-1).normalized * NoteSpeed;
+    }
+
+    private void Update() {
+        if (Triggered) {
+            if (Input.GetButtonDown("Left") && direction == NoteDirection.left) {
+                OnHit();
+            }
+            if (Input.GetButtonDown("Up") && direction == NoteDirection.up) {
+                OnHit();
+            }
+            if (Input.GetButtonDown("Down") && direction == NoteDirection.down) {
+                OnHit();
+            }
+            if (Input.GetButtonDown("Right") && direction == NoteDirection.right) {
+                OnHit();
+            }
+        }
+    }
+
+
+
+    public void OnHit() {
+        if (!missed) {
+            hit = true;
+            hits += 1;
+            NoteHit?.Invoke(hits);
+            DoDestroy();
+        }
     }
 
     public void OnMiss()
     {
-        misses += 1;
-        NoteMissed?.Invoke(misses);
-        IsEnabled = false;
-        StartCoroutine(ShrinkDown());
-        rigidBody.velocity = Vector2.zero;
-        Invoke("DoDestroy", DeathTime);
+        if (!hit) {
+            missed = true;
+            misses += 1;
+            NoteMissed?.Invoke(misses);
+            StartCoroutine(ShrinkDown());
+            rigidBody.velocity = Vector2.zero;
+            Invoke("DoDestroy", DeathTime);
+        }
     }
     IEnumerator ShrinkDown() 
     {

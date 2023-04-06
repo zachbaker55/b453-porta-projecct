@@ -24,10 +24,14 @@ public class MusicLabel : MonoBehaviour
         _text = GetComponent<TMP_Text>();
     }
 
-    //TODO: Move from start to a music event
-    private void Start() 
+    private void OnEnable() 
     {
-        ActivateLabel(_musicName);
+        MusicPlayer.SongStart += ActivateLabel;
+    }
+
+    private void OnDisable() 
+    {
+        MusicPlayer.SongStart -= ActivateLabel;
     }
 
     private void ActivateLabel(string musicName) 
