@@ -13,6 +13,7 @@ public class MusicPlayer : MonoBehaviour
     private AudioSource audioSource;
     private AudioClip song;
     public static event Action<string> SongStart;
+    public static event Action SongEnd;
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
@@ -35,8 +36,15 @@ public class MusicPlayer : MonoBehaviour
         if(args.DialogueContext == "StartingDialogue") PlaySong();
     }
 
-    private void PlaySong() {
+    private void PlaySong() 
+    {
         SongStart?.Invoke(song.name);
         audioSource.PlayDelayed(StartingDelay);
+        Invoke("EndSong",StartingDelay + song.length);
+    }
+
+    private void EndSong() 
+    {
+        SongEnd?.Invoke();
     }
 }
