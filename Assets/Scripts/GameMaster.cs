@@ -34,6 +34,7 @@ public class GameMaster : MonoBehaviour
         GameManager.PlayerDied += OnPlayerDead;
         DialogueEvent.DialogueStart += OnDialogueStart;
         DialogueEvent.DialogueEnd += OnDialogueEnd;
+        MusicPlayer.SongEnd += OnSongEnd;
         Note.NoteHit += OnNoteHit;
         Note.NoteMissed += OnNoteMissed;
         StartCoroutine(PlayDialogue(LevelDialogue.StartingDialogue, "StartingDialogue"));
@@ -47,6 +48,7 @@ public class GameMaster : MonoBehaviour
         DialogueEvent.DialogueEnd -= OnDialogueEnd;
         Note.NoteHit -= OnNoteHit;
         Note.NoteMissed -= OnNoteMissed;
+        MusicPlayer.SongEnd -= OnSongEnd;
     }
 
     public void SkipDialogue()
@@ -55,6 +57,10 @@ public class GameMaster : MonoBehaviour
         Dialogue.text = "";
     }
 
+    void OnSongEnd()
+    {
+        StartCoroutine(PlayDialogue(LevelDialogue.EndingDialogue, "EndingDialogue"));
+    }
 
     //Would be a little cleaner looking as a switch and not using strings in the Dialogue Event arg, 
     //but it makes it easier to understand with strings
@@ -99,7 +105,8 @@ public class GameMaster : MonoBehaviour
         else if(args.DialogueContext == "EndingDialogue")
         {
             if(!PlayerDead)
-            {SceneManager.GetSceneByBuildIndex(NextSceneValue);}
+            {SceneManager.LoadScene(NextSceneValue);}
+            Debug.Log("Changed scenes");
         }
 
         //if player died, after this dialogue, if death > 5 help, else respawn
