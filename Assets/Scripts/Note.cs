@@ -4,6 +4,13 @@ using System.Linq;
 using UnityEngine;
 using System;
 
+[System.Serializable]
+public enum NoteDirection {
+    left,
+    up,
+    down,
+    right
+}
 
 public class Note : MonoBehaviour
 {
