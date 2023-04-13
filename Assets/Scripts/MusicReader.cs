@@ -91,6 +91,5 @@ public class MusicReader : MonoBehaviour
             //If json has an incorrect note- stop and do nothing
             return;
         }
-        Debug.Log(musicNote.note);
     }
 }
