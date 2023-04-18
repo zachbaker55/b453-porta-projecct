@@ -43,10 +43,12 @@ public class MusicReader : MonoBehaviour
 
     private void Update()
     {
-        if (currentTime >= _noteList.musicNotes[currentIndex].time)
-        {
-            SpawnNote(_noteList.musicNotes[currentIndex]);
-            currentIndex++;
+        if (_noteList.musicNotes.Length > currentIndex) {
+            if (currentTime >= _noteList.musicNotes[currentIndex].time)
+            {
+                SpawnNote(_noteList.musicNotes[currentIndex]);
+                currentIndex++;
+            }
         }
         if (started)
         {
