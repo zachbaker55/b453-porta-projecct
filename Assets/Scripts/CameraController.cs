@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
 
     void ScreenShake()
     {
-        Debug.Log("Screen Shake Started");
+        //Debug.Log("Screen Shake Started");
         StartCoroutine( Shake(Duration, Frequency, Amplitude, Priority));
     }
 

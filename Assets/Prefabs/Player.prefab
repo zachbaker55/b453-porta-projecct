@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8381743601058385447}
   - component: {fileID: 2164596249960225500}
   - component: {fileID: 7736477020996516914}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 2445175658856764358}
   - component: {fileID: 8577133328680700300}
   - component: {fileID: 3257976500243167427}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5513137751980142752}
   - component: {fileID: 6308136512802047866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerLight2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
