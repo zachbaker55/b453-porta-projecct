@@ -159,7 +159,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   anim: {fileID: 7736477020996516914}
   <speed>k__BackingField: 5
-  <health>k__BackingField: 100
+  <health>k__BackingField: 4
   <isDead>k__BackingField: 0
 --- !u!61 &8577133328680700300
 BoxCollider2D:
