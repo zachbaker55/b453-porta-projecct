@@ -254,7 +254,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'YOU ARE DEAD
 
-    NOT BIG SUPRISE'
+    NOT BIG SURPRISE'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 12c7bc9b4c1311b4a95704f31c5bc3d0, type: 2}
   m_sharedMaterial: {fileID: -3094087898974046915, guid: 12c7bc9b4c1311b4a95704f31c5bc3d0, type: 2}
@@ -1625,3 +1625,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelTime: 1
+  remainTime: 4
+  endFlashes: 4

@@ -10,7 +10,7 @@ This script is a SINGLETON for that manages whatever global script behavior they
 public class GameManager : MonoBehaviour
 {
 
-    public static event Action PlayerWasDamaged;
+    public static event Action<float> PlayerWasDamaged;
     public static event Action PlayerDied;
 
     public static GameManager Instance { get; private set; }
@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     private void OnSceneChange(Scene current, Scene next) 
     {
         int newScene = next.buildIndex;
+        Note.Reset();
         if (newScene != 0) LevelCheckPoint = newScene;
     }
 
@@ -59,14 +60,14 @@ public class GameManager : MonoBehaviour
         SceneManager.activeSceneChanged -= OnSceneChange;
     }
 
-    public static void StartPlayerWasDamaged() 
+    public static void StartPlayerWasDamaged(float healthRemaining) 
     {
-        PlayerWasDamaged.Invoke();
+        PlayerWasDamaged?.Invoke(healthRemaining);
     }
 
     public static void StartPlayerDied() 
     {
-        PlayerDied.Invoke();
+        PlayerDied?.Invoke();
     }
 
 }

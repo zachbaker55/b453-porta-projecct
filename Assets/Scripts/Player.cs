@@ -89,8 +89,8 @@ public class Player : MonoBehaviour
         //Debug.Log(collision.name);
         if(collision.tag == "Enemy")
         {
-        GameManager.StartPlayerWasDamaged();
         this.health--;
+        GameManager.StartPlayerWasDamaged(this.health);
         }
     }
 

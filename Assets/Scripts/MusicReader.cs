@@ -26,9 +26,10 @@ public class MusicReader : MonoBehaviour
     [SerializeField] private GameObject noteUp;
     [SerializeField] private GameObject noteDown;
     [SerializeField] private GameObject noteRight;
-    private double currentTime = 0.0;
+    private float currentTime = -10.0f;
     private int currentIndex = 0;
-    private bool started = false;
+    private const float noteDropTime = 1.674979f;
+    private bool playing = false;
     public MusicNoteList _noteList = new MusicNoteList();
     public MusicNoteList NoteList
     {
@@ -44,13 +45,13 @@ public class MusicReader : MonoBehaviour
     private void Update()
     {
         if (_noteList.musicNotes.Length > currentIndex) {
-            if (currentTime >= _noteList.musicNotes[currentIndex].time)
+            if (currentTime + noteDropTime >= _noteList.musicNotes[currentIndex].time)
             {
                 SpawnNote(_noteList.musicNotes[currentIndex]);
                 currentIndex++;
             }
         }
-        if (started)
+        if (playing)
         {
             currentTime += Time.deltaTime;
         }
@@ -59,16 +60,24 @@ public class MusicReader : MonoBehaviour
     private void OnEnable()
     {
         MusicPlayer.SongStart += OnSongStart;
+        MusicPlayer.SongEnd += OnSongEnd;
     }
 
     private void OnDisable()
     {
         MusicPlayer.SongStart -= OnSongStart;
+        MusicPlayer.SongEnd += OnSongEnd;
     }
 
-    private void OnSongStart(string name)
+    private void OnSongStart(string name, float startingDelay)
     {
-        started = true;
+        currentTime = - startingDelay;
+        playing = true;
+    }
+    
+    private void OnSongEnd() {
+        currentTime = -10.0f;
+        playing = false;
     }
     private void SpawnNote(MusicNote musicNote)
     {

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242927743049172934}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: NoteStartDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242927742619475978}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: NoteStartRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242927742733449005}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: NoteStartUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4972039242655178998}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: NoteStartLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9083966473327430751}
   - component: {fileID: 9083966473327430688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MusicReader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 9083966473540655590}
   - component: {fileID: 9083966473540655591}
   - component: {fileID: 9083966473540655592}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: MusicSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841003700660532396, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}
@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841003700660532396, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}
@@ -559,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841003700660532396, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}
@@ -645,7 +645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841003700660532396, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 920ea78f4c810604d83d40c52f503fe4, type: 3}

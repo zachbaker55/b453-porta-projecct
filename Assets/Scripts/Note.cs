@@ -32,6 +32,11 @@ public class Note : MonoBehaviour
     private static int hits;
     private static int misses;
 
+    public static void Reset() {
+        hits = 0;
+        misses = 0;
+    }
+
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -59,8 +64,6 @@ public class Note : MonoBehaviour
         }
     }
 
-
-
     public void OnHit() {
         if (!missed) {
             hit = true;
@@ -76,9 +79,8 @@ public class Note : MonoBehaviour
             missed = true;
             misses += 1;
             NoteMissed?.Invoke(misses);
-            StartCoroutine(ShrinkDown());
             rigidBody.velocity = Vector2.zero;
-            Invoke("DoDestroy", DeathTime);
+            StartCoroutine(ShrinkDown());
         }
     }
     IEnumerator ShrinkDown() 
@@ -87,9 +89,10 @@ public class Note : MonoBehaviour
         for (float t = 0; t < DeathTime; t += Time.deltaTime) {
             float progress = t / DeathTime;
             transform.localScale = Vector2.Lerp(initialScale, Vector2.zero, progress);
-            rigidBody.velocity = Vector2.Lerp(Vector2.zero, new Vector2(0,2), progress);
+            //rigidBody.velocity = Vector2.Lerp(Vector2.zero, new Vector2(0,2), progress);
             yield return null;
         }
+        DoDestroy();
     }
 
     private void DoDestroy() 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7246584907607306891}
   - component: {fileID: 1148272862876879388}
   - component: {fileID: 3378608213484255354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: seta2Esquerda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  <NoteSpeed>k__BackingField: 4
-  <DeathTime>k__BackingField: 0.01
+  <NoteSpeed>k__BackingField: 9
+  <DeathTime>k__BackingField: 1
 --- !u!50 &4208893565093588347
 Rigidbody2D:
   serializedVersion: 4
@@ -262,7 +262,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4

@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
         GameManager.PlayerWasDamaged -= ScreenShake;
     }
 
-    void ScreenShake()
+    void ScreenShake(float healthRemaining)
     {
         //Debug.Log("Screen Shake Started");
         StartCoroutine( Shake(Duration, Frequency, Amplitude, Priority));

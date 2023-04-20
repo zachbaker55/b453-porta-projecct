@@ -14,6 +14,8 @@ public class MusicLabel : MonoBehaviour
 
     [Range(0.0f,3.0f)]
     [SerializeField] private float labelTime = 1.0f;
+    [SerializeField] private float remainTime = 10.0f;
+    [SerializeField] private int endFlashes = 4;
     private string _musicName = "Example Song Name";
     public string MusicName 
     { 
@@ -34,7 +36,7 @@ public class MusicLabel : MonoBehaviour
         MusicPlayer.SongStart -= ActivateLabel;
     }
 
-    private void ActivateLabel(string musicName) 
+    private void ActivateLabel(string musicName, float startingDelay) 
     {
         _musicName = musicName;
         StartCoroutine(Label());
@@ -42,10 +44,44 @@ public class MusicLabel : MonoBehaviour
 
     IEnumerator Label() 
     {
-        foreach (char c in _musicName) {
+        string musicString = "Music: " + _musicName;
+        foreach (char c in musicString) 
+        {
             _text.text += c;
             yield return new WaitForSeconds(labelTime * 0.1f);
         }
+        Invoke("DeactivateLabel",remainTime);
+    }
+
+    private void DeactivateLabel() 
+    {
+
+        StartCoroutine(RemoveLabel());
+    }
+
+    IEnumerator RemoveLabel() 
+    {
+        string musicString = _musicName;
+        foreach (char c in _musicName) 
+        {
+            musicString = musicString.Substring(1);
+            _text.text = "Music: " + musicString;
+            yield return new WaitForSeconds(labelTime * 0.1f);
+        }
+        bool flash = true;
+        for (int i = 0; i < endFlashes*2; i++) {
+            if (flash)
+            {
+                _text.text = "";
+                flash = false;
+            } else
+            {
+                _text.text = "Music:";
+                flash = true;
+            }
+            yield return new WaitForSeconds(labelTime * 0.1f);
+        }
+        _text.text = "";
     }
 
 }

@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     private void Start() {
         if (GameManager.Instance.LevelCheckPoint != 0) 
         {
+            PlayText.fontSize = 22;
             PlayText.text = "CONTINUE";
         }
         
