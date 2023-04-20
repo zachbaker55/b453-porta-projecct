@@ -96,7 +96,6 @@ public class GameMaster : MonoBehaviour
             //After starting dialogue begin unskippable dialogue during the music
             StartCoroutine(PlayDialogue(LevelDialogue.MiddleDialogue, "MiddleDialogue"));
             //call Start music event or music event listens for this event
-            WorldChanges();
         }
          //after unskippable dialogue, wait until we receive the end of music event or death
         //else if(args.DialogueContext == "MiddleDialogue"){}
@@ -248,13 +247,6 @@ public class GameMaster : MonoBehaviour
     {
         MissesText.text = "Misses: " + misses;
     }
-
-
-    void WorldChanges()
-    {
-
-    }
-
 
 
 }

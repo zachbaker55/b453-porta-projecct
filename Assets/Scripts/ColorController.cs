@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class ColorController : MonoBehaviour
 {
     public Volume postProcessingVolume;
-    public ColorProfile[] colorProfiles;
+    public ColorProfileList colorProfileList;
     //being serialized just for debug viewing purpose. do not override in editor.
     [SerializeField] private ColorAdjustments colorAdjustments;
     [SerializeField] private int currentProfileIndex = 0;
@@ -39,20 +39,12 @@ public class ColorController : MonoBehaviour
     {
         while (true)
         {
-            ColorProfile targetProfile = colorProfiles[currentProfileIndex];
+            ColorProfile targetProfile = colorProfileList.colorProfiles[currentProfileIndex];
 
-            //if you have instantTransition enabled, then the next color changing event will interfere with the current one going on
-            //incase you needed that mechanic. otherwise this doesn't start the next colorprofile till the transition timer is done.
-            if (targetProfile.instantTransition == false)
-            {
-                yield return StartCoroutine(ChangeColorProfile(targetProfile));
-            }
-            else
-            {
-                StartCoroutine(ChangeColorProfile(targetProfile));
-            }
+            yield return StartCoroutine(ChangeColorProfile(targetProfile));
+            
             //if the level doesn't end or something modulo divide so the colorchanges just repeat, instead of out of bounds crash
-            currentProfileIndex = (currentProfileIndex + 1) % colorProfiles.Length;
+            currentProfileIndex = (currentProfileIndex + 1) % colorProfileList.colorProfiles.Count;
         }
     }
 
@@ -79,7 +71,7 @@ public class ColorController : MonoBehaviour
         }
         if(targetProfile.errorMode == true) //if enabled the colors revert back to base value of 0 after transitiontime
         {
-            yield return new WaitForSeconds(targetProfile.transitionTime);
+            
             elapsedTime = 0;
             while (elapsedTime < targetProfile.transitionTime)
             {
