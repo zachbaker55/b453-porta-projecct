@@ -20,7 +20,7 @@ MonoBehaviour:
     contrast: -101
   - errorMode: 0
     transitionTime: 16.5
-    saturation: -101
+    saturation: -25
     brightness: 1
     contrast: -101
   - errorMode: 1
@@ -54,12 +54,12 @@ MonoBehaviour:
     brightness: -101
     contrast: -101
   - errorMode: 0
-    transitionTime: 4
+    transitionTime: 2
     saturation: 0
     brightness: -101
     contrast: -101
   - errorMode: 0
-    transitionTime: 2
+    transitionTime: 1
     saturation: -90
     brightness: -101
     contrast: -101
@@ -104,7 +104,7 @@ MonoBehaviour:
     brightness: -101
     contrast: 55
   - errorMode: 0
-    transitionTime: 4
+    transitionTime: 3
     saturation: -101
     brightness: -101
     contrast: -101
@@ -114,7 +114,57 @@ MonoBehaviour:
     brightness: -101
     contrast: 60
   - errorMode: 0
-    transitionTime: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 70
+  - errorMode: 0
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 55
+  - errorMode: 0
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 55
+  - errorMode: 0
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 55
+  - errorMode: 0
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 60
+  - errorMode: 0
+    transitionTime: 0.5
     saturation: -101
     brightness: -101
     contrast: -101
@@ -128,41 +178,26 @@ MonoBehaviour:
     saturation: -101
     brightness: -101
     contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 55
   - errorMode: 0
     transitionTime: 1
+    saturation: 0
+    brightness: -101
+    contrast: -101
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -99
+    brightness: -101
+    contrast: -101
+  - errorMode: 0
+    transitionTime: 43
     saturation: -101
     brightness: -101
     contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 55
   - errorMode: 0
-    transitionTime: 1
-    saturation: -101
+    transitionTime: 6
+    saturation: 0
     brightness: -101
     contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 55
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 60
   - errorMode: 0
     transitionTime: 2
     saturation: -101
@@ -172,15 +207,210 @@ MonoBehaviour:
     transitionTime: 0.5
     saturation: -101
     brightness: -101
-    contrast: 70
+    contrast: 80
   - errorMode: 0
-    transitionTime: 5
+    transitionTime: 1
     saturation: -101
     brightness: -101
     contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
   - errorMode: 0
-    transitionTime: 6
-    saturation: 0
+    transitionTime: 28
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 2
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 80
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 2
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
+    brightness: -101
+    contrast: -101
+  - errorMode: 1
+    transitionTime: 0.5
+    saturation: -101
+    brightness: -101
+    contrast: 90
+  - errorMode: 0
+    transitionTime: 1
+    saturation: -101
     brightness: -101
     contrast: -101
   - errorMode: 0
@@ -189,232 +419,7 @@ MonoBehaviour:
     brightness: -101
     contrast: -101
   - errorMode: 0
-    transitionTime: 34
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 0
-    transitionTime: 6
-    saturation: 0
-    brightness: -101
-    contrast: -101
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 70
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 70
-  - errorMode: 0
-    transitionTime: 18
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 3
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 80
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 70
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 70
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 70
-  - errorMode: 0
-    transitionTime: 4
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 75
-  - errorMode: 0
-    transitionTime: 2
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 80
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 80
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 80
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 80
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 80
-  - errorMode: 0
-    transitionTime: 3
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 0.5
-    saturation: -101
-    brightness: -101
-    contrast: 80
-  - errorMode: 0
-    transitionTime: 1
-    saturation: -101
-    brightness: -101
-    contrast: -101
-  - errorMode: 1
-    transitionTime: 3
+    transitionTime: 60
     saturation: -99
     brightness: -101
     contrast: -101

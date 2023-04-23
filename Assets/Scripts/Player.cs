@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log(collision.name);
-        if(collision.tag == "Enemy")
+        if(collision.tag == "Enemy" && health > 0)
         {
         this.health--;
         GameManager.StartPlayerWasDamaged(this.health);

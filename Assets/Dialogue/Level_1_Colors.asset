@@ -16,13 +16,13 @@ MonoBehaviour:
   - errorMode: 0
     transitionTime: 30
     saturation: -101
-    brightness: -101
+    brightness: 0.5
     contrast: -101
   - errorMode: 0
     transitionTime: 60
     saturation: -99
-    brightness: 1.2
-    contrast: -101
+    brightness: 1
+    contrast: 25
   - errorMode: 0
     transitionTime: 60
     saturation: -101
@@ -32,4 +32,9 @@ MonoBehaviour:
     transitionTime: 60
     saturation: 0
     brightness: -0.1
+    contrast: 0
+  - errorMode: 0
+    transitionTime: 60
+    saturation: -101
+    brightness: -101
     contrast: -101
